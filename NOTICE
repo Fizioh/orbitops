@@ -1,0 +1,16 @@
+OrbitOps
+Copyright 2026 OrbitOps Contributors
+
+This product includes software developed by OrbitOps Contributors.
+
+Third-party notices
+-------------------
+Scientific and orbital libraries used by this project (Skyfield, sgp4,
+Astropy, NumPy, SciPy) retain their respective licenses. See
+docs/licenses.md once published for a maintained inventory.
+
+CesiumJS is used for visualization only and is licensed under the
+Apache License 2.0 by Cesium GS, Inc.
+
+Demo orbital elements are synthetic or clearly attributed public
+TLE-style data. They must never be presented as operational flight data.
