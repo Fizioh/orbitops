@@ -1,0 +1,5 @@
+# Local overrides example — copy to docker-compose.override.yml if needed.
+# services:
+#   api:
+#     ports:
+#       - "8001:8000"
