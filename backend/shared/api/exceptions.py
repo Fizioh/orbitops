@@ -19,9 +19,11 @@ def orbitops_exception_handler(exc: Exception, context: dict[str, Any]) -> Respo
                 "details": exc.detail.details or {},
             }
         }
-        http_status = status.HTTP_400_BAD_REQUEST
-        if exc.detail.code.value == "NOT_FOUND":
-            http_status = status.HTTP_404_NOT_FOUND
+        http_status = (
+            status.HTTP_404_NOT_FOUND
+            if exc.detail.code.value == "NOT_FOUND"
+            else status.HTTP_400_BAD_REQUEST
+        )
         return Response(payload, status=http_status)
 
     return exception_handler(exc, context)

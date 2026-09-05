@@ -120,6 +120,7 @@ labeled **SIMULATION ONLY**.
 | [scaling.md](docs/scaling.md) | What changes at 500 / 10k satellites |
 | [benchmarks.md](docs/benchmarks.md) | Propagation and scheduling benches |
 | [licenses.md](docs/licenses.md) | Dependency and dataset licenses |
+| [security.md](docs/security.md) | Security baseline |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Setup and PR expectations |
 
 ## License

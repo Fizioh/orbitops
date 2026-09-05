@@ -69,5 +69,9 @@ plugins = ["mypy_django_plugin.main"]
 warn_unused_ignores = true
 packages = ["apps", "shared", "config"]
 
+[[tool.mypy.overrides]]
+module = ["environ.*", "celery.*"]
+ignore_missing_imports = true
+
 [tool.django-stubs]
 django_settings_module = "config.settings.test"
