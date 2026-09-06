@@ -1,16 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --oo-bg: #0f1419;
-  --oo-panel: #171e26;
-  --oo-fg: #e8eef4;
+  --oo-bg: #0c1117;
+  --oo-panel: #141b24;
+  --oo-panel-2: #1a2330;
+  --oo-fg: #e7eef6;
   --oo-muted: #8b9aab;
-  --oo-border: #2a3542;
+  --oo-border: #273341;
   --oo-accent: #3db8a0;
   --oo-accent-soft: rgba(61, 184, 160, 0.14);
   --oo-ok: #6fbf73;
   --oo-danger: #e07a6a;
   --oo-warn: #d4a24c;
+  --oo-info: #6aa6d8;
+  --oo-observation: #5b9fd4;
+  --oo-downlink: #3db8a0;
+  --oo-maintenance: #d4a24c;
+  --oo-maneuver: #c084fc;
   color-scheme: dark;
   font-family: "IBM Plex Sans", system-ui, sans-serif;
   background: var(--oo-bg);
@@ -29,11 +35,48 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(61, 184, 160, 0.08), transparent 60%),
-    radial-gradient(900px 500px at 100% 0%, rgba(70, 110, 160, 0.1), transparent 55%),
-    var(--oo-bg);
+    radial-gradient(1100px 520px at 8% -8%, rgba(61, 184, 160, 0.09), transparent 55%),
+    radial-gradient(900px 480px at 100% 0%, rgba(74, 120, 170, 0.1), transparent 50%),
+    linear-gradient(180deg, #0e151d 0%, var(--oo-bg) 40%);
 }
 
 #root {
   min-height: 100vh;
+}
+
+@keyframes oo-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes oo-pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.oo-fade-up {
+  animation: oo-fade-up 420ms ease-out both;
+}
+
+.oo-fade-up-delay-1 {
+  animation: oo-fade-up 480ms ease-out 80ms both;
+}
+
+.oo-fade-up-delay-2 {
+  animation: oo-fade-up 480ms ease-out 160ms both;
+}
+
+.oo-live-dot {
+  animation: oo-pulse-soft 1.8s ease-in-out infinite;
 }
